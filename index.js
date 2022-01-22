@@ -7,7 +7,16 @@ const generateReadme = require('./utils/generateMarkdown.js');
 // Create an array of questions for user input
 const questions = () => {
     // using inquirer to prompt questions to user 
-    return inquirer.prompt([])
+    return inquirer.prompt([{
+        type: 'checkbox', 
+        name: 'license',
+        choices: ["MIT", "GPLv3", "GPL"],
+        message: 'Pick your License.'
+    },{
+        
+    }
+        
+    ])
 
 
 // TODO: Create a function to write README file
