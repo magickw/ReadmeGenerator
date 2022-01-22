@@ -1,24 +1,38 @@
 // Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let licenseType = license.license; 
-  let yourLicense = ''
+  let yourLicenseBadge = ''
   if(licenseType === 'MIT') {
-    yourLicense = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
+    yourLicenseBadge = `![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
   } else if (licenseType === 'GPLv3') {
-    yourLicense = `![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)`
+    yourLicense = `![GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
   } else if (licenseType === 'GPL') {
-    yourLicense = `![GPL license](https://img.shields.io/badge/License-GPL-blue.svg)`
+    yourLicenseBadge = `![GPL](https://img.shields.io/badge/License-GPL-blue.svg)`
   } else {
-    // If there is no license, return an empty string
-    license.license = ""
+    yourLicenseBadge = ''
   }
-  return yourLicense;
+  return yourLicenseBadge;
 };
 }
 
 // Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  let licenseType = license.license; 
+  let yourLicenseUrl = ''
+  if(licenseType === 'MIT') {
+    yourLicenseUrl = `https://choosealicense.com/licenses/mit/`
+  } else if (licenseType === 'GPLv3') {
+    yourLicenseUrl = `https://choosealicense.com/licenses/gpl-3.0/`
+  } else if (licenseType === 'GPL') {
+    yourLicenseUrl = `https://www.gnu.org/licenses/gpl-3.0.en.html`
+  } else {
+    yourLicenseUrl = ''
+  }
+  return yourLicenseUrl;
+};
+}
 
 // Create a function that returns the license section of README
 // If there is no license, return an empty string
