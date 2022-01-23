@@ -6,7 +6,7 @@ const generateReadme = require('./utils/generateMarkdown.js');
 
 // Create an array of questions for user input
 const questions = () => {
-    // using inquirer to prompt questions to user 
+    // Using inquirer to prompt questions to user 
     return inquirer.prompt([
         {
             type: "input",
@@ -22,10 +22,10 @@ const questions = () => {
         {
             type: "input",
             name: "description",
-            message: "Write a brief description of your project: ",
+            message: "Write a brief description of your project.",
             validate: function (answer) {
                 if (answer.length < 1) {
-                    return console.log("A valid project description is required.");
+                    return console.log("Enter a valid project description.");
                 }
                 return true;
             }
@@ -33,29 +33,57 @@ const questions = () => {
         {
             type: "input",
             name: "installation",
-            message: "Describe the installation process if any: ",
+            message: "Describe the installation process if applicable.",
         },
         {
             type: "input",
             name: "usage",
-            message: "What is this project usage for?"
+            message: "What is this project used for?"
         },
         {
         type: 'checkbox', 
         name: 'license',
-        choices: ["MIT", "GPLv3", "GPL"],
-        message: 'Pick your License.'
-    },{
+        choices: ["MIT", "GPLv3", "GPL", "Mozilla Public License 2.0"],
+        message: 'Pick your License.'},
+        {
+            type: 'input',
+            message: "What is your GitHub username? ",
+            name: 'username',
+            validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("Enter a valid GitHub username.");
+            }
+            return true;
+        }
+        },
+        {
+            type: 'input',
+            message: "What is the name of your GitHub repo?",
+            name: 'repo',
+            validate: function (answer) {
+                if (answer.length < 1) {
+                    return console.log("A valid GitHub repo is required for a badge.");
+                }
+                return true;
+            }
+        },
         
-    }
-        
-    ])
+    ]);
 
+}
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if (err) {
+          return console.log(err);
+        }
+        console.log("Congratulations! Successfully wrote to README.md!")
+    });
+}
+}
 
-// TODO: Create a function to initialize app
+// Create a function to initialize app
 function init() {}
 
 // Function call to initialize app

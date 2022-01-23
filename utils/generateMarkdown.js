@@ -9,7 +9,9 @@ function renderLicenseBadge(license) {
     yourLicense = `![GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
   } else if (licenseType === 'GPL') {
     yourLicenseBadge = `![GPL](https://img.shields.io/badge/License-GPL-blue.svg)`
-  } else {
+  } else if (licenseType === 'Mozilla Public License 2.0') {
+    yourLicenseBadge = `![MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`
+  }else {
     yourLicenseBadge = '';
   }
   return yourLicenseBadge;
@@ -27,7 +29,9 @@ function renderLicenseLink(license) {
     yourLicenseUrl = `https://choosealicense.com/licenses/gpl-3.0/`
   } else if (licenseType === 'GPL') {
     yourLicenseUrl = `https://www.gnu.org/licenses/gpl-3.0.en.html`
-  } else {
+  } else if (licenseType === 'Mozilla Public License 2.0') {
+    yourLicenseUrl = `https://www.mozilla.org/en-US/MPL/2.0/`
+  }else {
     yourLicenseUrl = '';
   }
   return yourLicenseUrl;
