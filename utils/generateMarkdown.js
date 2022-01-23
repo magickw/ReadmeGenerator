@@ -1,7 +1,7 @@
 // Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  let licenseType = license.choices; 
+  let licenseType = userResponses.license; 
   let yourLicenseBadge = '';
   if(licenseType === 'MIT') {
     yourLicenseBadge = `![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
@@ -21,7 +21,7 @@ function renderLicenseBadge(license) {
 // Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  let licenseType = license.choices; 
+  let licenseType = userResponses.license; 
   let yourLicenseUrl = '';
   if(licenseType === 'MIT') {
     yourLicenseUrl = `https://choosealicense.com/licenses/mit/`

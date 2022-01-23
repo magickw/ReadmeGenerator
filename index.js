@@ -41,14 +41,15 @@ const questions = () => {
             message: "What is this project used for?"
         },
         {
-        type: 'checkbox', 
-        name: 'license',
-        choices: ["MIT", "GPLv3", "GPL", "Mozilla Public License 2.0"],
-        message: 'Pick your License.'},
+            type: "checkbox", 
+            name: "license",
+            choices: ["MIT", "GPLv3", "GPL", "Mozilla Public License 2.0"],
+             message: "Pick your License.",
+        },
         {
-            type: 'input',
+            type: "input",
             message: "What is your GitHub username? ",
-            name: 'username',
+            name: "username",
             validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Enter a valid GitHub username.");
@@ -57,9 +58,9 @@ const questions = () => {
         }
         },
         {
-            type: 'input',
+            type: "input",
             message: "What is the name of your GitHub repo?",
-            name: 'repo',
+            name: "repo",
             validate: function (answer) {
                 if (answer.length < 1) {
                     return console.log("A valid GitHub repo is required for a badge.");
@@ -74,6 +75,7 @@ const questions = () => {
 
 // Create a function to write README file
 function writeToFile(fileName, data) {
+    //fs.writeFile() method is used to asynchronously write the specified data to a file. 
     fs.writeFile(fileName, data, err => {
         if (err) {
           return console.log(err);
