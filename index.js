@@ -25,7 +25,7 @@ const questions = () => {
             message: "Write a brief description of your project.",
             validate: function (answer) {
                 if (answer.length < 1) {
-                    return console.log("Enter a valid project description.");
+                    return console.log("Must enter a valid project description.");
                 }
                 return true;
             }
@@ -52,10 +52,15 @@ const questions = () => {
             name: "username",
             validate: function (answer) {
             if (answer.length < 1) {
-                return console.log("Enter a valid GitHub username.");
+                return console.log("Must enter a valid GitHub username.");
             }
             return true;
         }
+        },
+        {
+            type: "input",
+            message: "Who are the contributor(s)? Provide guidelines on how other developers can contribute to your project.",
+            name: "contributing",
         },
         {
             type: "input",
