@@ -9,6 +9,7 @@ const util = require('util');
 const generateReadme = require('./utils/generateMarkdown.js');
 
 // Create an array of questions for user input
+// const questions =
 function promptUser() {
     // Using inquirer to prompt questions to user 
     return inquirer.prompt([
@@ -114,6 +115,20 @@ function writeToFile(fileName, data) {
 const writeFileAsync = util.promisify(writeToFile);
 
 // Create a function to initialize app
+// function init() {
+
+//     inquirer
+//     .prompt(questions)  //prompt user for questions 
+
+//     .then((response) => {  //only after we get prompts, then 
+//         //console.log(response);
+  
+//         const {fileName } = answers;  
+
+//         //call fxn to write the file with paramenters of the filename and the returned data from generateMarkdown on other js file 
+//         writeToFile(fileName, generateMarkdown(answers)); 
+//     });
+// }
 async function init() {
     try {
         // Ask user questions and generate answers
