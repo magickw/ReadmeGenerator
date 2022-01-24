@@ -91,7 +91,20 @@ function writeToFile(fileName, data) {
 }
 
 // Create a function to initialize app
-function init() {}
+// Async function using util.promisify 
+async function init() {
+    try {
+        // Ask user questions and generate responses
+        const answers = await inquirer.prompt(questions);
+        const markdown = generateReadme(answers);
+        // Write to README.md
+        await writeFileAsync('README.md', markdown);
+        console.log('Congratulations! Successfully wrote to README.md!');
+    }   catch(err) {
+        console.log(err);
+    }
+  }
+  
 
 // Function call to initialize app
 init();
