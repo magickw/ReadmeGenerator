@@ -1,6 +1,6 @@
 // Importing File System module
 const fs = require('fs'); 
-// Importing require module
+// Importing requirer module
 const inquirer = require('inquirer'); 
 // Importing Utilities module
 const util = require('util');
@@ -40,13 +40,13 @@ function promptUser() {
             type: "input",
             name: "installation",
             message: "Describe the installation process if applicable.",
-            default: "git clone the repo to your local machine. Run npm install to install the package dependencies as specified in the package.json. Run node index.js in the command line. Answer the prompts in your command line to generate the README file. Once you have answered all prompts, your README.md file will be ready.",
+            default: "git clone the repo to your local machine. Run "npm install" to install the package dependencies as specified in the package.json. Run "node index.js" in the command line. Answer the prompts in your command line to generate the README file. Once you have answered all prompts, your README.md file will be ready.",
         },
         {
             type: "input",
             name: "usage",
             message: "What is this project usage for?",
-            default: "The application uses the inquirer package to prompt you in the command line with a series of questions about your GitHub information and your project. It takes your answers and will generate markdown and a table of contents based on your responses to the prompts. Once all prompts are answered, fs.writeFile will be used to generate your project's README.md file.",
+            default: "The application uses the inquirer package to prompt you in the command line with a series of questions about your GitHub information and your project. It takes your answers and will generate markdown and a table of contents based on your responses to the prompts. Once all prompts are answered, "fs.writeFile" method will be used to generate your project's README.md file.",
         },
         {
             type: "checkbox", 
