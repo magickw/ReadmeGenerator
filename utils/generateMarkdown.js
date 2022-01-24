@@ -76,18 +76,22 @@ ${answers.usage}
 ## Demo
 
 <img src="demo.gif" alt="demo" />
+
 **[⬆ back to top](#table-of-contents)**
 
 ## License
 This application is licensed under ${answers.license} license. 
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Contributing
 This application is developed by ${answers.contributing}. If you would like to contribute it, please follow the guidelines for how to do so.
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Tests
 ${answers.test}
+
 **[⬆ back to top](#table-of-contents)**
 
 ## Questions
