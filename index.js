@@ -61,10 +61,12 @@ const questions = () => {
             type: "input",
             message: "Who are the contributor(s)? Provide guidelines on how other developers can contribute to your project.",
             name: "contributing",
+            default: "Baofeng Guo"
         },
         {   type: "input",
             name: "test",
-            message: "What command would you like to run tests?"
+            message: "What command would you like to run tests?",
+            default: "No testing required beyond a simple test-run of the application."
         },
         {
             type: "input",
@@ -95,15 +97,13 @@ function writeToFile(fileName, data) {
 
 
 // Create a function to initialize app
-// Async function using util.promisify 
 function init() {
     try {
         // Ask user questions and generate responses
-        const answers = await inquirer.prompt();
+        const answers = await inquirer.prompt(questions);
         const markdown = generateReadme(answers);
         // Write to README.md
         await writeFileAsync('README.md', markdown);
-        console.log("Congratulations! Successfully wrote to README.md!");
     }   catch(err) {
         console.log(err);
     }

@@ -86,7 +86,7 @@ ${answers.tests}
 ## Questions
 For any question, please contact me on GitHub: [${answers.username}](https://github.com/${answers.username})<br/>
 <br/>
-This README was generated with ❤️ by ${answers.title}(${answers.repo}).
+This README was generated with ❤️ by [${answers.title}](${answers.repo}).
 
 `;
 }
