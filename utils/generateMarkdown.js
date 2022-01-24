@@ -15,7 +15,6 @@ function renderLicenseBadge(license) {
     yourLicenseBadge = '';
   }
   return yourLicenseBadge;
-};
 }
 
 // Create a function that returns the license link
@@ -35,7 +34,6 @@ function renderLicenseLink(license) {
     yourLicenseUrl = '';
   }
   return yourLicenseUrl;
-};
 }
 
 // Create a function that returns the license section of README
@@ -86,7 +84,7 @@ ${answers.tests}
 ## Questions
 For any question, please contact me on GitHub: [${answers.username}](https://github.com/${answers.username})<br/>
 <br/>
-This README was generated with ❤️ by [${answers.title}](${answers.repo}).
+
 
 `;
 }

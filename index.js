@@ -1,11 +1,14 @@
-// require modules 
+// Importing File System module
 const fs = require('fs'); 
 const inquirer = require('inquirer'); 
+// Importing Utilities module
+const util = require('util');
+
 // Include packages needed for this application
 const generateReadme = require('./utils/generateMarkdown.js');
 
 // Create an array of questions for user input
-const questions = () => {
+function promptUser() {
     // Using inquirer to prompt questions to user 
     return inquirer.prompt([
         {
@@ -44,12 +47,13 @@ const questions = () => {
             type: "checkbox", 
             name: "license",
             choices: ["MIT", "GPLv3", "GPL", "Mozilla Public License 2.0"],
-             message: "Pick your License.",
+            message: "Pick your License.",
         },
         {
             type: "input",
             message: "What is your GitHub username? ",
             name: "username",
+            default: "magickw",
             validate: function (answer) {
             if (answer.length < 1) {
                 return console.log("Must enter a valid GitHub username.");
@@ -61,7 +65,7 @@ const questions = () => {
             type: "input",
             message: "Who are the contributor(s)? Provide guidelines on how other developers can contribute to your project.",
             name: "contributing",
-            default: "Baofeng Guo"
+            default: "Baofeng Guo",
         },
         {   type: "input",
             name: "test",
@@ -72,6 +76,7 @@ const questions = () => {
             type: "input",
             message: "What is the name of your GitHub repo?",
             name: "repo",
+            default: "https://github.com/magickw/readmegenerator",
             validate: function (answer) {
                 if (answer.length < 1) {
                     return console.log("A valid GitHub repo is required for a badge.");
@@ -95,15 +100,18 @@ function writeToFile(fileName, data) {
     });
 }
 
+const writeFileAsync = util.promisify(writeToFile);
 
 // Create a function to initialize app
-function init() {
+async function init() {
     try {
-        // Ask user questions and generate responses
-        const answers = await inquirer.prompt(questions);
+        // Ask user questions and generate answers
+        const answers = await promptUser();
+        console.log("Your answers: ", answers);
         const markdown = generateReadme(answers);
         // Write to README.md
         await writeFileAsync('README.md', markdown);
+        console.log("Congratulations! Successfully wrote to README.md!");
     }   catch(err) {
         console.log(err);
     }
