@@ -62,6 +62,10 @@ const questions = () => {
             message: "Who are the contributor(s)? Provide guidelines on how other developers can contribute to your project.",
             name: "contributing",
         },
+        {   type: "input",
+            name: "test",
+            message: "What command would you like to run tests?"
+        },
         {
             type: "input",
             message: "What is the name of your GitHub repo?",
@@ -88,18 +92,18 @@ function writeToFile(fileName, data) {
         console.log("Congratulations! Successfully wrote to README.md!")
     });
 }
-}
+
+const writeFileAsync = util.promisify(writeToFile);
 
 // Create a function to initialize app
 // Async function using util.promisify 
 async function init() {
     try {
         // Ask user questions and generate responses
-        const answers = await inquirer.prompt(questions);
+        const answers = await inquirer.prompt();
         const markdown = generateReadme(answers);
         // Write to README.md
         await writeFileAsync('README.md', markdown);
-        console.log(markdown);
         console.log("Congratulations! Successfully wrote to README.md!");
     }   catch(err) {
         console.log(err);
