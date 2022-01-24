@@ -10,7 +10,7 @@ const questions = () => {
     return inquirer.prompt([
         {
             type: "input",
-            name: "projectTitle",
+            name: "project",
             message: "What is the project title?",
             validate: function (answer) {
                 if (answer.length < 1) {
@@ -93,11 +93,10 @@ function writeToFile(fileName, data) {
     });
 }
 
-const writeFileAsync = util.promisify(writeToFile);
 
 // Create a function to initialize app
 // Async function using util.promisify 
-async function init() {
+function init() {
     try {
         // Ask user questions and generate responses
         const answers = await inquirer.prompt();
