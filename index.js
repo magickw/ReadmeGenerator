@@ -13,7 +13,7 @@ function promptUser() {
     return inquirer.prompt([
         {
             type: "input",
-            name: "project",
+            name: "title",
             message: "What is the project title?",
             validate: function (answer) {
                 if (answer.length < 1) {
@@ -46,7 +46,7 @@ function promptUser() {
         {
             type: "checkbox", 
             name: "license",
-            choices: ["MIT", "GPLv3", "GPL", "Mozilla Public License 2.0"],
+            choices: ["MIT", "GPLv3", "GPL", "ISC"],
             message: "Pick your License.",
         },
         {
