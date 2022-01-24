@@ -1,20 +1,20 @@
 // // Create a function that returns a license badge based on which license is passed in
 // // If there is no license, return an empty string
 // function renderLicenseBadge(license) {
-//   let licenseType = answers.license; 
-//   let yourLicenseBadge = '';
-//   if(licenseType === 'MIT') {
-//     yourLicenseBadge = `![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
-//   } else if (licenseType === 'GPLv3') {
-//     yourLicense = `![GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)`
-//   } else if (licenseType === 'GPL') {
-//     yourLicenseBadge = `![GPL](https://img.shields.io/badge/License-GPL-blue.svg)`
-//   } else if (licenseType === 'Mozilla Public License 2.0') {
-//     yourLicenseBadge = `![MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-blue.svg)`
-//   }else {
-//     yourLicenseBadge = '';
-//   }
-//   return yourLicenseBadge;
+//   switch (license){
+//   case "MIT":
+//    return "[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+//    break;
+//   case "GPLv3":
+//    return "[![GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+//    break;
+//   case "GPL":
+//    return "[![GPL](https://img.shields.io/badge/License-GPL-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+//    break;
+//   case "ISC":
+//    return "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
+//    break;
+//   return "";
 // }
 
 // // Create a function that returns the license link
