@@ -15,6 +15,7 @@ function promptUser() {
             type: "input",
             name: "title",
             message: "What is the project title?",
+            default: "NodeJS README Generator using ES6",
             validate: function (answer) {
                 if (answer.length < 1) {
                     return console.log("Must enter a valid project title.");
@@ -26,6 +27,7 @@ function promptUser() {
             type: "input",
             name: "description",
             message: "Write a brief description of your project.",
+            default: "This is a command-line application that runs with Node.js that dynamically generates a README.md file based on your input about your project.",
             validate: function (answer) {
                 if (answer.length < 1) {
                     return console.log("Must enter a valid project description.");
@@ -37,11 +39,13 @@ function promptUser() {
             type: "input",
             name: "installation",
             message: "Describe the installation process if applicable.",
+            default: "git clone the repo to your local machine. Run npm install to install the package dependencies as specified in the package.json. Run node index.js in the command line. Answer the prompts in your command line to generate the README file. Once you have answered all prompts, your README.md file will be ready.",
         },
         {
             type: "input",
             name: "usage",
-            message: "What is this project used for?"
+            message: "What is this project usage for?",
+            default: "The application uses the inquirer package to prompt you in the command line with a series of questions about your GitHub information and your project. It takes your answers and will generate markdown and a table of contents based on your responses to the prompts. Once all prompts are answered, fs.writeFile will be used to generate your project's README.md file.",
         },
         {
             type: "checkbox", 
@@ -70,7 +74,7 @@ function promptUser() {
         {   type: "input",
             name: "test",
             message: "What command would you like to run tests?",
-            default: "No testing required beyond a simple test-run of the application."
+            default: "No testing required."
         },
         {
             type: "input",

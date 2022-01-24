@@ -53,10 +53,10 @@ function generateMarkdown(answers) {
   return `
   <h1 align="center">${answers.title}</h1>
   
-![badge](https://img.shields.io/badge/license-${answers.license}-blue.svg)<br>
+![badge](https://img.shields.io/badge/license-${answers.license}-blue.svg)
 
 ## Description
-${answers.description}<br>
+${answers.description}
 
 ## Table of Contents
 - [Installation](#installation)
@@ -64,26 +64,25 @@ ${answers.description}<br>
 - [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
-- [Questions](#questions)<br>
+- [Questions](#questions)
 
 ## Installation
-${answers.installation}<br>
+${answers.installation}
+
 ## Usage
 ${answers.usage}
-<br>
+
 ## License
 This application is licensed under ${answers.license} license. 
-<br>
+
 ## Contributing
 This application is developed by ${answers.contributing}. If you would like to contribute it, please follow the guidelines for how to do so.
-<br>
+
 ## Tests
 ${answers.test}
-<br>
-## Questions
-For any question, please contact me on GitHub: [${answers.username}](https://github.com/${answers.username})<br/>
-<br>
 
+## Questions
+For any question, please contact me on GitHub: [${answers.username}](https://github.com/${answers.username}).
 
 `;
 }
