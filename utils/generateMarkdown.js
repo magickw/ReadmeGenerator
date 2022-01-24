@@ -61,6 +61,7 @@ ${answers.description}
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Demo](#demo)
 - [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
@@ -71,6 +72,10 @@ ${answers.installation}
 
 ## Usage
 ${answers.usage}
+
+##Demo
+
+<img src="demo.gif" alt="demo" />
 
 ## License
 This application is licensed under ${answers.license} license. 

@@ -9,6 +9,7 @@ This is a command-line application that runs with Node.js that dynamically gener
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Demo](#demo)
 - [License](#license)
 - [Contributing](#contributing)
 - [Tests](#tests)
