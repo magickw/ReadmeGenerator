@@ -46,7 +46,7 @@ function promptUser() {
             type: "input",
             name: "usage",
             message: "What is this project usage for?",
-            default: "The application uses the inquirer package to prompt you in the command line with a series of questions about your GitHub information and your project. It takes your answers and will generate markdown and a table of contents based on your responses to the prompts. Once all prompts are answered, `fs.writeFile` method will be used to generate your project's README.md file.",
+            default: "The application uses the `inquirer` package to prompt you in the command line with a series of questions about your GitHub information and your project. It takes your answers and will generate markdown and a table of contents based on your responses to the prompts. Once all prompts are answered, `fs.writeFile` method will be used to generate your project's README.md file.",
         },
         {
             type: "checkbox", 
@@ -75,7 +75,7 @@ function promptUser() {
         {   type: "input",
             name: "test",
             message: "What command would you like to run tests?",
-            default: "No testing required beyond the test-run of the application. The repo contains every module you need.",
+            default: "No testing required beyond the test-run of the application. The repo comes with every module you need.",
         },
         {
             type: "input",
@@ -113,6 +113,7 @@ async function init() {
         // Ask user questions and generate answers
         // await can only be used with async function
         const answers = await promptUser();
+        //Log your answers
         console.log("Your answers: ", answers);
         const markdown = generateReadme(answers);
         // Write to README.md
