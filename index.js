@@ -40,13 +40,13 @@ function promptUser() {
             type: "input",
             name: "installation",
             message: "Describe the installation process if applicable.",
-            default: "git clone the repo to your local machine. Run "npm install" to install the package dependencies as specified in the package.json. Run "node index.js" in the command line. Answer the prompts in your command line to generate the README file. Once you have answered all prompts, your README.md file will be ready.",
+            default: "git clone the repo to your local machine. Run npm install to install the package dependencies as specified in the package.json. Run node index.js in the command line. Answer the prompts in your command line to generate the README file. Once you have answered all prompts, your README.md file will be ready.",
         },
         {
             type: "input",
             name: "usage",
             message: "What is this project usage for?",
-            default: "The application uses the inquirer package to prompt you in the command line with a series of questions about your GitHub information and your project. It takes your answers and will generate markdown and a table of contents based on your responses to the prompts. Once all prompts are answered, "fs.writeFile" method will be used to generate your project's README.md file.",
+            default: "The application uses the inquirer package to prompt you in the command line with a series of questions about your GitHub information and your project. It takes your answers and will generate markdown and a table of contents based on your responses to the prompts. Once all prompts are answered, fs.writeFile method will be used to generate your project's README.md file.",
         },
         {
             type: "checkbox", 
@@ -75,13 +75,13 @@ function promptUser() {
         {   type: "input",
             name: "test",
             message: "What command would you like to run tests?",
-            default: "No testing required."
+            default: "No testing required beyond the test-run of the application. The repo contains every module you need.",
         },
         {
             type: "input",
             message: "What is the name of your GitHub repo?",
             name: "repo",
-            default: "https://github.com/magickw/readmegenerator",
+            default: "readmegenerator",
             validate: function (answer) {
                 if (answer.length < 1) {
                     return console.log("A valid GitHub repo is required for a badge.");
