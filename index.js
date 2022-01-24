@@ -89,6 +89,12 @@ function promptUser() {
                 return true;
             }
         },
+        {
+            type: "input",
+            message: "What is your email address?",
+            name: "email",
+            default: "peterguo1983@gmail.com",
+        },
         
     ]);
 

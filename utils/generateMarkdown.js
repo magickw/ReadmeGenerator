@@ -95,7 +95,7 @@ ${answers.test}
 **[⬆ back to top](#table-of-contents)**
 
 ## Questions
-For any question, please contact me on GitHub: [${answers.username}](https://github.com/${answers.username}).
+For any question, please contact me on GitHub: [${answers.username}](https://github.com/${answers.username}) or email me at ${answers.email}.
 
 **[⬆ back to top](#table-of-contents)**
 

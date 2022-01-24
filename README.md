@@ -43,7 +43,7 @@ No testing required beyond the test-run of the application. The repo comes with 
 **[⬆ back to top](#table-of-contents)**
 
 ## Questions
-For any question, please contact me on GitHub: [magickw](https://github.com/magickw).
+For any question, please contact me on GitHub: [magickw](https://github.com/magickw) or email me at peterguo1983@gmail.com.
 
 **[⬆ back to top](#table-of-contents)**
 
