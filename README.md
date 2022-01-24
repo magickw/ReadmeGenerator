@@ -21,7 +21,7 @@ git clone the repo to your local machine. Run npm install to install the package
 ## Usage
 The application uses the inquirer package to prompt you in the command line with a series of questions about your GitHub information and your project. It takes your answers and will generate markdown and a table of contents based on your responses to the prompts. Once all prompts are answered, fs.writeFile will be used to generate your project's README.md file.
 
-##Demo
+## Demo
 
 <img src="demo.gif" alt="demo" />
 

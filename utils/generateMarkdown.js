@@ -73,7 +73,7 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 
-##Demo
+## Demo
 
 <img src="demo.gif" alt="demo" />
 
