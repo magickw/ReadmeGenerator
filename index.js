@@ -46,7 +46,7 @@ function promptUser() {
             type: "input",
             name: "usage",
             message: "What is this project usage for?",
-            default: "The application uses the inquirer package to prompt you in the command line with a series of questions about your GitHub information and your project. It takes your answers and will generate markdown and a table of contents based on your responses to the prompts. Once all prompts are answered, 'fs.writeFile' method will be used to generate your project's README.md file.",
+            default: "The application uses the inquirer package to prompt you in the command line with a series of questions about your GitHub information and your project. It takes your answers and will generate markdown and a table of contents based on your responses to the prompts. Once all prompts are answered, ·fs.writeFile· method will be used to generate your project's README.md file.",
         },
         {
             type: "checkbox", 
