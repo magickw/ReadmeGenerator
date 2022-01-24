@@ -64,7 +64,19 @@ ${answers.description}
 ## Installation
 ${answers.installation}
 <br>
-
+## Usage
+${answers.usage}
+<br>
+## License
+This application is licensed under ${answers.license} license. 
+<br/>
+## Contributing
+This application is developed by ${answers.contributing}. If you would like to contribute it, please follow the guidelines for how to do so.
+<br/>
+## Questions
+For any question, please contact me on GitHub: [${answers.username}](https://github.com/${answers.username})<br/>
+<br/>
+This README was generated with ❤️ by ${answers.projectTitle}(${answers.repo}).
 `;
 }
 
