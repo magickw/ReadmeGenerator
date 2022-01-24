@@ -88,6 +88,7 @@ ${answers.test}
 
 ## Questions
 For any question, please contact me on GitHub: [${answers.username}](https://github.com/${answers.username}).
+**[⬆ back to top](#table-of-contents)**
 
 `;
 }

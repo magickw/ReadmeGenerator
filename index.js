@@ -40,7 +40,7 @@ function promptUser() {
             type: "input",
             name: "installation",
             message: "Describe the installation process if applicable.",
-            default: "git clone the repo to your local machine. Run 'npm install' to install the package dependencies as specified in the package.json. Run 'node index.js' in the command line. Answer the prompts in your command line to generate the README file. Once you have answered all prompts, your README.md file will be ready.",
+            default: "`git clone` the repo to your local machine. Run `npm install` in terminal to install the package dependencies as specified in the package.json. Run `node index.js` in the command line. Answer the prompts in your command line to generate the README file. Once you have answered all prompts, your README.md file will be ready.",
         },
         {
             type: "input",
