@@ -1,5 +1,6 @@
 // Importing File System module
 const fs = require('fs'); 
+// Importing require module
 const inquirer = require('inquirer'); 
 // Importing Utilities module
 const util = require('util');
@@ -110,6 +111,7 @@ const writeFileAsync = util.promisify(writeToFile);
 async function init() {
     try {
         // Ask user questions and generate answers
+        // await can only be used with async function
         const answers = await promptUser();
         console.log("Your answers: ", answers);
         const markdown = generateReadme(answers);
