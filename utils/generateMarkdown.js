@@ -8,8 +8,8 @@
 //   case "GPLv3":
 //    return "[![GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
 //    break;
-//   case "GPL":
-//    return "[![GPL](https://img.shields.io/badge/License-GPL-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+//   case "Apache-2.0":
+///   return "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge&logo=appveyor)](https://opensource.org/licenses/Apache-2.0)";
 //    break;
 //   case "ISC":
 //    return "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
@@ -20,20 +20,20 @@
 // // Create a function that returns the license link
 // // If there is no license, return an empty string
 // function renderLicenseLink(license) {
-//   let licenseType = answers.license; 
-//   let yourLicenseUrl = '';
-//   if(licenseType === 'MIT') {
-//     yourLicenseUrl = `https://choosealicense.com/licenses/mit/`
-//   } else if (licenseType === 'GPLv3') {
-//     yourLicenseUrl = `https://choosealicense.com/licenses/gpl-3.0/`
-//   } else if (licenseType === 'GPL') {
-//     yourLicenseUrl = `https://www.gnu.org/licenses/gpl-3.0.en.html`
-//   } else if (licenseType === 'Mozilla Public License 2.0') {
-//     yourLicenseUrl = `https://www.mozilla.org/en-US/MPL/2.0/`
-//   }else {
-//     yourLicenseUrl = '';
-//   }
-//   return yourLicenseUrl;
+  // switch (license){
+  //   case "MIT":
+  //     return `This application is licensed under [MIT](https://opensource.org/licenses/MIT) license`;
+  //     break; 
+  //   case "GPLv3":
+  //     return `This application is licensed under [GPLv3](https://www.gnu.org/licenses/lgpl-3.0) license`;
+  //     break;
+  //   case "Apache-2.0":
+  //     return `This application is licensed under [Apache 2.0](https://opensource.org/licenses/Apache-2.0) license`;
+  //     break;
+  //   case "ISC":
+  //     return `This application is licensed under [ISC](https://opensource.org/licenses/ISC) license`;
+  //     break;
+  //     return ""; 
 // }
 
 // Create a function that returns the license section of README
