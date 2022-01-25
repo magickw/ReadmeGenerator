@@ -120,12 +120,12 @@ const writeFileAsync = util.promisify(writeToFile);
 //     inquirer
 //     .prompt(questions)  //prompt user for questions 
 
-//     .then((response) => {  //only after we get prompts, then 
-//         //console.log(response);
+//     .then((response) => { 
+//         console.log(response);
   
 //         const {fileName } = answers;  
 
-//         //call fxn to write the file with paramenters of the filename and the returned data from generateMarkdown on other js file 
+//         //Write the file with paramenters of the filename and the returned data from generateMarkdown 
 //         writeToFile(fileName, generateMarkdown(answers)); 
 //     });
 // }
