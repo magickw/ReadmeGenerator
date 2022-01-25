@@ -52,7 +52,7 @@ function promptUser() {
         {
             type: "checkbox", 
             name: "license",
-            choices: ["MIT", "GPLv3", "Apache-2.0", "ISC"],
+            choices: ["MIT", "GPLv3", "Unlicense", "ISC"],
             message: "Pick your License.",
         },
         {

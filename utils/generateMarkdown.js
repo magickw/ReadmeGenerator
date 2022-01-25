@@ -1,18 +1,18 @@
-// // Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
+// Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
 // function renderLicenseBadge(license) {
 //   switch (license){
 //   case "MIT":
-//    return "[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+//    return "[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
 //    break;
 //   case "GPLv3":
-//    return "[![GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+//    return "[![GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)]";
 //    break;
-//   case "Apache-2.0":
-///   return "[![Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+//   case "Unlicense":
+// /   return "[![The Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)]";
 //    break;
 //   case "ISC":
-//    return "[![ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
+//    return "[![ISC](https://img.shields.io/badge/License-ISC-blue.svg)]";
 //    break;
 //   return "";
 // }
@@ -20,20 +20,20 @@
 // // Create a function that returns the license link
 // // If there is no license, return an empty string
 // function renderLicenseLink(license) {
-  // switch (license){
-  //   case "MIT":
-  //     return `This application is licensed under [MIT](https://opensource.org/licenses/MIT) license`;
-  //     break; 
-  //   case "GPLv3":
-  //     return `This application is licensed under [GPLv3](https://www.gnu.org/licenses/lgpl-3.0) license`;
-  //     break;
-  //   case "Apache-2.0":
-  //     return `This application is licensed under [Apache 2.0](https://opensource.org/licenses/Apache-2.0) license`;
-  //     break;
-  //   case "ISC":
-  //     return `This application is licensed under [ISC](https://opensource.org/licenses/ISC) license`;
-  //     break;
-  //     return ""; 
+//   switch (license){
+//     case "MIT":
+//       return `This application is licensed under [MIT](https://opensource.org/licenses/MIT) license`;
+//       break; 
+//     case "GPLv3":
+//       return `This application is licensed under [GPLv3](https://www.gnu.org/licenses/lgpl-3.0) license`;
+//       break;
+//     case "Unlicense":
+//       return `This application is licensed under [The Unlicense](http://unlicense.org/) license`;
+//       break;
+//     case "ISC":
+//       return `This application is licensed under [ISC](https://opensource.org/licenses/ISC) license`;
+//       break;
+//       return ""; 
 // }
 
 // Create a function that returns the license section of README
